@@ -1,0 +1,609 @@
+{
+  "name": "@businessmaps/metaontology",
+  "version": "0.62.3",
+  "description": "A metaontology that supercharges your app. Built on the Business Maps framework for modeling businesses as structured knowledge graphs.",
+  "author": "Business Maps",
+  "license": "Apache-2.0",
+  "keywords": [
+    "ontology",
+    "metaontology",
+    "knowledge-graph",
+    "business-maps",
+    "dsl",
+    "modeling"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Business-Maps/metaontology.git"
+  },
+  "homepage": "https://github.com/Business-Maps/metaontology#readme",
+  "bugs": {
+    "url": "https://github.com/Business-Maps/metaontology/issues"
+  },
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./core": {
+      "import": {
+        "types": "./dist/core/index.d.ts",
+        "default": "./dist/core/index.js"
+      },
+      "require": {
+        "types": "./dist/core/index.d.cts",
+        "default": "./dist/core/index.cjs"
+      }
+    },
+    "./content": {
+      "import": {
+        "types": "./dist/content/index.d.ts",
+        "default": "./dist/content/index.js"
+      },
+      "require": {
+        "types": "./dist/content/index.d.cts",
+        "default": "./dist/content/index.cjs"
+      }
+    },
+    "./dsl": {
+      "import": {
+        "types": "./dist/dsl/index.d.ts",
+        "default": "./dist/dsl/index.js"
+      },
+      "require": {
+        "types": "./dist/dsl/index.d.cts",
+        "default": "./dist/dsl/index.cjs"
+      }
+    },
+    "./dsl/dispatcher": {
+      "import": {
+        "types": "./dist/dsl/dispatcher.d.ts",
+        "default": "./dist/dsl/dispatcher.js"
+      },
+      "require": {
+        "types": "./dist/dsl/dispatcher.d.cts",
+        "default": "./dist/dsl/dispatcher.cjs"
+      }
+    },
+    "./engine": {
+      "import": {
+        "types": "./dist/engine/index.d.ts",
+        "default": "./dist/engine/index.js"
+      },
+      "require": {
+        "types": "./dist/engine/index.d.cts",
+        "default": "./dist/engine/index.cjs"
+      }
+    },
+    "./engine/triples": {
+      "import": {
+        "types": "./dist/engine/triples.d.ts",
+        "default": "./dist/engine/triples.js"
+      },
+      "require": {
+        "types": "./dist/engine/triples.d.cts",
+        "default": "./dist/engine/triples.cjs"
+      }
+    },
+    "./engine/query": {
+      "import": {
+        "types": "./dist/engine/query.d.ts",
+        "default": "./dist/engine/query.js"
+      },
+      "require": {
+        "types": "./dist/engine/query.d.cts",
+        "default": "./dist/engine/query.cjs"
+      }
+    },
+    "./engine/merge": {
+      "import": {
+        "types": "./dist/engine/merge.d.ts",
+        "default": "./dist/engine/merge.js"
+      },
+      "require": {
+        "types": "./dist/engine/merge.d.cts",
+        "default": "./dist/engine/merge.cjs"
+      }
+    },
+    "./engine/diff": {
+      "import": {
+        "types": "./dist/engine/diff.d.ts",
+        "default": "./dist/engine/diff.js"
+      },
+      "require": {
+        "types": "./dist/engine/diff.d.cts",
+        "default": "./dist/engine/diff.cjs"
+      }
+    },
+    "./engine/completeness": {
+      "import": {
+        "types": "./dist/engine/completeness.d.ts",
+        "default": "./dist/engine/completeness.js"
+      },
+      "require": {
+        "types": "./dist/engine/completeness.d.cts",
+        "default": "./dist/engine/completeness.cjs"
+      }
+    },
+    "./engine/apply": {
+      "import": {
+        "types": "./dist/engine/apply.d.ts",
+        "default": "./dist/engine/apply.js"
+      },
+      "require": {
+        "types": "./dist/engine/apply.d.cts",
+        "default": "./dist/engine/apply.cjs"
+      }
+    },
+    "./engine/applyM0": {
+      "import": {
+        "types": "./dist/engine/applyM0.d.ts",
+        "default": "./dist/engine/applyM0.js"
+      },
+      "require": {
+        "types": "./dist/engine/applyM0.d.cts",
+        "default": "./dist/engine/applyM0.cjs"
+      }
+    },
+    "./engine/inverse": {
+      "import": {
+        "types": "./dist/engine/inverse.d.ts",
+        "default": "./dist/engine/inverse.js"
+      },
+      "require": {
+        "types": "./dist/engine/inverse.d.cts",
+        "default": "./dist/engine/inverse.cjs"
+      }
+    },
+    "./engine/analyze": {
+      "import": {
+        "types": "./dist/engine/analyze.d.ts",
+        "default": "./dist/engine/analyze.js"
+      },
+      "require": {
+        "types": "./dist/engine/analyze.d.cts",
+        "default": "./dist/engine/analyze.cjs"
+      }
+    },
+    "./engine/inheritance": {
+      "import": {
+        "types": "./dist/engine/inheritance.d.ts",
+        "default": "./dist/engine/inheritance.js"
+      },
+      "require": {
+        "types": "./dist/engine/inheritance.d.cts",
+        "default": "./dist/engine/inheritance.cjs"
+      }
+    },
+    "./engine/instanceTriples": {
+      "import": {
+        "types": "./dist/engine/instanceTriples.d.ts",
+        "default": "./dist/engine/instanceTriples.js"
+      },
+      "require": {
+        "types": "./dist/engine/instanceTriples.d.cts",
+        "default": "./dist/engine/instanceTriples.cjs"
+      }
+    },
+    "./engine/instanceValidation": {
+      "import": {
+        "types": "./dist/engine/instanceValidation.d.ts",
+        "default": "./dist/engine/instanceValidation.js"
+      },
+      "require": {
+        "types": "./dist/engine/instanceValidation.d.cts",
+        "default": "./dist/engine/instanceValidation.cjs"
+      }
+    },
+    "./engine/m0Triples": {
+      "import": {
+        "types": "./dist/engine/m0Triples.d.ts",
+        "default": "./dist/engine/m0Triples.js"
+      },
+      "require": {
+        "types": "./dist/engine/m0Triples.d.cts",
+        "default": "./dist/engine/m0Triples.cjs"
+      }
+    },
+    "./engine/serialize": {
+      "import": {
+        "types": "./dist/engine/serialize.d.ts",
+        "default": "./dist/engine/serialize.js"
+      },
+      "require": {
+        "types": "./dist/engine/serialize.d.cts",
+        "default": "./dist/engine/serialize.cjs"
+      }
+    },
+    "./engine/normalize": {
+      "import": {
+        "types": "./dist/engine/normalize.d.ts",
+        "default": "./dist/engine/normalize.js"
+      },
+      "require": {
+        "types": "./dist/engine/normalize.d.cts",
+        "default": "./dist/engine/normalize.cjs"
+      }
+    },
+    "./export": {
+      "import": {
+        "types": "./dist/export/index.d.ts",
+        "default": "./dist/export/index.js"
+      },
+      "require": {
+        "types": "./dist/export/index.d.cts",
+        "default": "./dist/export/index.cjs"
+      }
+    },
+    "./generate": {
+      "import": {
+        "types": "./dist/generate/index.d.ts",
+        "default": "./dist/generate/index.js"
+      },
+      "require": {
+        "types": "./dist/generate/index.d.cts",
+        "default": "./dist/generate/index.cjs"
+      }
+    },
+    "./generate/index": {
+      "import": {
+        "types": "./dist/generate/index.d.ts",
+        "default": "./dist/generate/index.js"
+      },
+      "require": {
+        "types": "./dist/generate/index.d.cts",
+        "default": "./dist/generate/index.cjs"
+      }
+    },
+    "./generate/app": {
+      "import": {
+        "types": "./dist/generate/app.d.ts",
+        "default": "./dist/generate/app.js"
+      },
+      "require": {
+        "types": "./dist/generate/app.d.cts",
+        "default": "./dist/generate/app.cjs"
+      }
+    },
+    "./generate/domainLayer": {
+      "import": {
+        "types": "./dist/generate/domainLayer.d.ts",
+        "default": "./dist/generate/domainLayer.js"
+      },
+      "require": {
+        "types": "./dist/generate/domainLayer.d.cts",
+        "default": "./dist/generate/domainLayer.cjs"
+      }
+    },
+    "./generate/export": {
+      "import": {
+        "types": "./dist/generate/export.d.ts",
+        "default": "./dist/generate/export.js"
+      },
+      "require": {
+        "types": "./dist/generate/export.d.cts",
+        "default": "./dist/generate/export.cjs"
+      }
+    },
+    "./generate/download": {
+      "import": {
+        "types": "./dist/generate/download.d.ts",
+        "default": "./dist/generate/download.js"
+      },
+      "require": {
+        "types": "./dist/generate/download.d.cts",
+        "default": "./dist/generate/download.cjs"
+      }
+    },
+    "./generate/selfProjection": {
+      "import": {
+        "types": "./dist/generate/selfProjection.d.ts",
+        "default": "./dist/generate/selfProjection.js"
+      },
+      "require": {
+        "types": "./dist/generate/selfProjection.d.cts",
+        "default": "./dist/generate/selfProjection.cjs"
+      }
+    },
+    "./meta": {
+      "import": {
+        "types": "./dist/meta/index.d.ts",
+        "default": "./dist/meta/index.js"
+      },
+      "require": {
+        "types": "./dist/meta/index.d.cts",
+        "default": "./dist/meta/index.cjs"
+      }
+    },
+    "./meta/customTypes": {
+      "import": {
+        "types": "./dist/meta/customTypes.d.ts",
+        "default": "./dist/meta/customTypes.js"
+      },
+      "require": {
+        "types": "./dist/meta/customTypes.d.cts",
+        "default": "./dist/meta/customTypes.cjs"
+      }
+    },
+    "./meta/ontology": {
+      "import": {
+        "types": "./dist/meta/ontology.d.ts",
+        "default": "./dist/meta/ontology.js"
+      },
+      "require": {
+        "types": "./dist/meta/ontology.d.cts",
+        "default": "./dist/meta/ontology.cjs"
+      }
+    },
+    "./meta/i18n": {
+      "import": {
+        "types": "./dist/meta/i18n.d.ts",
+        "default": "./dist/meta/i18n.js"
+      },
+      "require": {
+        "types": "./dist/meta/i18n.d.cts",
+        "default": "./dist/meta/i18n.cjs"
+      }
+    },
+    "./meta/vocabulary": {
+      "import": {
+        "types": "./dist/meta/vocabulary.d.ts",
+        "default": "./dist/meta/vocabulary.js"
+      },
+      "require": {
+        "types": "./dist/meta/vocabulary.d.cts",
+        "default": "./dist/meta/vocabulary.cjs"
+      }
+    },
+    "./meta/fields": {
+      "import": {
+        "types": "./dist/meta/fields.d.ts",
+        "default": "./dist/meta/fields.js"
+      },
+      "require": {
+        "types": "./dist/meta/fields.d.cts",
+        "default": "./dist/meta/fields.cjs"
+      }
+    },
+    "./meta/facets": {
+      "import": {
+        "types": "./dist/meta/facets.d.ts",
+        "default": "./dist/meta/facets.js"
+      },
+      "require": {
+        "types": "./dist/meta/facets.d.cts",
+        "default": "./dist/meta/facets.cjs"
+      }
+    },
+    "./migrations": {
+      "import": {
+        "types": "./dist/migrations/index.d.ts",
+        "default": "./dist/migrations/index.js"
+      },
+      "require": {
+        "types": "./dist/migrations/index.d.cts",
+        "default": "./dist/migrations/index.cjs"
+      }
+    },
+    "./runtime": {
+      "import": {
+        "types": "./dist/runtime/index.d.ts",
+        "default": "./dist/runtime/index.js"
+      },
+      "require": {
+        "types": "./dist/runtime/index.d.cts",
+        "default": "./dist/runtime/index.cjs"
+      }
+    },
+    "./runtime/pipelineRuntime": {
+      "import": {
+        "types": "./dist/runtime/pipelineRuntime.d.ts",
+        "default": "./dist/runtime/pipelineRuntime.js"
+      },
+      "require": {
+        "types": "./dist/runtime/pipelineRuntime.d.cts",
+        "default": "./dist/runtime/pipelineRuntime.cjs"
+      }
+    },
+    "./runtime/queryBuilder": {
+      "import": {
+        "types": "./dist/runtime/queryBuilder.d.ts",
+        "default": "./dist/runtime/queryBuilder.js"
+      },
+      "require": {
+        "types": "./dist/runtime/queryBuilder.d.cts",
+        "default": "./dist/runtime/queryBuilder.cjs"
+      }
+    },
+    "./runtime/typedCollection": {
+      "import": {
+        "types": "./dist/runtime/typedCollection.d.ts",
+        "default": "./dist/runtime/typedCollection.js"
+      },
+      "require": {
+        "types": "./dist/runtime/typedCollection.d.cts",
+        "default": "./dist/runtime/typedCollection.cjs"
+      }
+    },
+    "./runtime/writebackRuntime": {
+      "import": {
+        "types": "./dist/runtime/writebackRuntime.d.ts",
+        "default": "./dist/runtime/writebackRuntime.js"
+      },
+      "require": {
+        "types": "./dist/runtime/writebackRuntime.d.cts",
+        "default": "./dist/runtime/writebackRuntime.cjs"
+      }
+    },
+    "./runtime/inMemoryRepository": {
+      "import": {
+        "types": "./dist/runtime/inMemoryRepository.d.ts",
+        "default": "./dist/runtime/inMemoryRepository.js"
+      },
+      "require": {
+        "types": "./dist/runtime/inMemoryRepository.d.cts",
+        "default": "./dist/runtime/inMemoryRepository.cjs"
+      }
+    },
+    "./runtime/providers/localProvider": {
+      "import": {
+        "types": "./dist/runtime/providers/localProvider.d.ts",
+        "default": "./dist/runtime/providers/localProvider.js"
+      },
+      "require": {
+        "types": "./dist/runtime/providers/localProvider.d.cts",
+        "default": "./dist/runtime/providers/localProvider.cjs"
+      }
+    },
+    "./types": {
+      "import": {
+        "types": "./dist/types/index.d.ts",
+        "default": "./dist/types/index.js"
+      },
+      "require": {
+        "types": "./dist/types/index.d.cts",
+        "default": "./dist/types/index.cjs"
+      }
+    },
+    "./types/context": {
+      "import": {
+        "types": "./dist/types/context.d.ts",
+        "default": "./dist/types/context.js"
+      },
+      "require": {
+        "types": "./dist/types/context.d.cts",
+        "default": "./dist/types/context.cjs"
+      }
+    },
+    "./types/commands": {
+      "import": {
+        "types": "./dist/types/commands.d.ts",
+        "default": "./dist/types/commands.js"
+      },
+      "require": {
+        "types": "./dist/types/commands.d.cts",
+        "default": "./dist/types/commands.cjs"
+      }
+    },
+    "./types/query": {
+      "import": {
+        "types": "./dist/types/query.d.ts",
+        "default": "./dist/types/query.js"
+      },
+      "require": {
+        "types": "./dist/types/query.d.cts",
+        "default": "./dist/types/query.cjs"
+      }
+    },
+    "./types/branch": {
+      "import": {
+        "types": "./dist/types/branch.d.ts",
+        "default": "./dist/types/branch.js"
+      },
+      "require": {
+        "types": "./dist/types/branch.d.cts",
+        "default": "./dist/types/branch.cjs"
+      }
+    },
+    "./types/commits": {
+      "import": {
+        "types": "./dist/types/commits.d.ts",
+        "default": "./dist/types/commits.js"
+      },
+      "require": {
+        "types": "./dist/types/commits.d.cts",
+        "default": "./dist/types/commits.cjs"
+      }
+    },
+    "./types/instance": {
+      "import": {
+        "types": "./dist/types/instance.d.ts",
+        "default": "./dist/types/instance.js"
+      },
+      "require": {
+        "types": "./dist/types/instance.d.cts",
+        "default": "./dist/types/instance.cjs"
+      }
+    },
+    "./types/m0": {
+      "import": {
+        "types": "./dist/types/m0.d.ts",
+        "default": "./dist/types/m0.js"
+      },
+      "require": {
+        "types": "./dist/types/m0.d.cts",
+        "default": "./dist/types/m0.cjs"
+      }
+    },
+    "./util": {
+      "import": {
+        "types": "./dist/util/templates.d.ts",
+        "default": "./dist/util/templates.js"
+      },
+      "require": {
+        "types": "./dist/util/templates.d.cts",
+        "default": "./dist/util/templates.cjs"
+      }
+    },
+    "./util/templates": {
+      "import": {
+        "types": "./dist/util/templates.d.ts",
+        "default": "./dist/util/templates.js"
+      },
+      "require": {
+        "types": "./dist/util/templates.d.cts",
+        "default": "./dist/util/templates.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "immer": "^11.1.4",
+    "klona": "^2.0.6",
+    "nanoid": "^5.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.2",
+    "vitest": "^4.1.4"
+  },
+  "peerDependencies": {
+    "typescript": ">=5.0.0"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  }
+}
